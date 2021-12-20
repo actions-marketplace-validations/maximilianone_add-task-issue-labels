@@ -2,7 +2,7 @@
   "name": "add-task-issue-labels",
   "version": "1.0.0",
   "private": true,
-  "description": "A Probot app",
+  "description": "A Probot action",
   "author": "Maskym Hornostai <maximilianone22@gmail.com>",
   "license": "ISC",
   "homepage": "https://github.com/maximilianone/add-task-issue-labels",
@@ -12,16 +12,17 @@
     "probot-app"
   ],
   "scripts": {
-    "start": "probot run ./index.js",
-    "test": "jest"
+    "build": "ncc build index.js -o dist"
   },
   "dependencies": {
     "@probot/adapter-github-actions": "^3.0.1"
   },
   "devDependencies": {
-    "jest": "^26.6.3",
-    "nock": "^13.0.5",
-    "smee-client": "^1.2.2"
+    "@semantic-release/git": "^10.0.1",
+    "@zeit/ncc": "^0.22.3",
+    "semantic-release": "^18.0.1",
+    "nock": "^13.2.1",
+    "uvu": "^0.5.2"
   },
   "engines": {
     "node": ">= 10.13.0"
